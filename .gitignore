@@ -1,0 +1,7 @@
+.vs/
+.idea/
+*.dll
+bin/
+obj/
+.vscode/
+*.user
