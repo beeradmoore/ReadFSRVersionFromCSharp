@@ -41,8 +41,11 @@ It will then use the ported code from [version selection](https://gpuopen.com/ma
 
 ### Current results
 
-Currently calling `ffxQuery` returns `FFX_API_RETURN_OK`, however `versionCount` remains as its initial value (even if you change the initial value).
+~~Currently calling `ffxQuery` returns `FFX_API_RETURN_OK`, however `versionCount` remains as its initial value (even if you change the initial value).~~
 
-I am sure the call itself is working because if you change the header type (`++versionQuery.header.type;`) the return code will be `FFX_API_RETURN_NO_PROVIDER`.
+~~I am sure the call itself is working because if you change the header type (`++versionQuery.header.type;`) the return code will be `FFX_API_RETURN_NO_PROVIDER`.~~
 
-I am unsure if I am passing structs to C++ dll incorrectly or if what I am attempting to do does not work like this. I don't know enough C++ to create a raw C++ minimal example, but if you can feel free to send a PR.
+~~I am unsure if I am passing structs to C++ dll incorrectly or if what I am attempting to do does not work like this. I don't know enough C++ to create a raw C++ minimal example, but if you can feel free to send a PR.~~
+
+After some changes this appears to be loading version strings. It is not loading version ids. The code was also generated with GitHub Copilot (GPT 4o) and should not be used in production. This is possibly why it is not loading version ids.
+
