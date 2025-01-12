@@ -30,5 +30,9 @@ if (File.Exists(fsrDx12Dll) == false)
 }
 
 
-var amdFidelityfxVk = new AmdFidelityfxVk();
-amdFidelityfxVk.GetVersion();
+//var amdFidelityfxVk = new AmdFidelityfxVk();
+//amdFidelityfxVk.GetVersion();
+
+var amdFidelityFXAPI = new AMDFidelityFXAPI();
+amdFidelityFXAPI.GetVersions(fsrVkDll);
+amdFidelityFXAPI.GetVersions(fsrDx12Dll);

@@ -24,7 +24,8 @@ public struct QueryDescGetVersions
     public IntPtr device;               ///< For DX12: pointer to ID3D12Device.
     public IntPtr outputCount;      ///< Input capacity of id and name arrays. Output number of returned versions. If initially zero, output is number of available versions.
     public IntPtr versionIds;       ///< Output array of version ids to be used as version overrides. If null, only names and count are returned.
-    public byte[]? versionNames;  ///< Output array of version names for display. If null, only ids and count are returned. If both this and versionIds are null, only count is returned.
+    public IntPtr versionNames;  ///< Output array of version names for display. If null, only ids and count are returned. If both this and versionIds are null, only count is returned.
+    //public byte[]? versionNames;  ///< Output array of version names for display. If null, only ids and count are returned. If both this and versionIds are null, only count is returned.
 
     public QueryDescGetVersions()
     {
