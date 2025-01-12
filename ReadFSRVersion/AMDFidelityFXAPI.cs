@@ -27,7 +27,7 @@ internal class AMDFidelityFXAPI
 
     public List<string?> GetVersions(string dllPath)
     {
-        Debug.WriteLine($"AMDFidelityFXAPI - Loading {dllPath}");
+        Console.WriteLine($"AMDFidelityFXAPI - Loading {dllPath}");
         var hModule = LoadLibrary(dllPath);
         if (hModule == IntPtr.Zero)
         {
@@ -61,11 +61,11 @@ internal class AMDFidelityFXAPI
             versionQuery.outputCount = Marshal.AllocHGlobal(sizeof(UInt64));
             Marshal.WriteInt64(versionQuery.outputCount, (UInt32)versionCount);
 
-            Debug.WriteLine("AMDFidelityFXAPI - Reading version count");
+            Console.WriteLine("AMDFidelityFXAPI - Reading version count");
             // get number of versions for allocation
             // ffxQuery(IntPtr.Zero, &versionQuery.header);
             var returnCode = ffxQuery(IntPtr.Zero, ref versionQuery);
-            Debug.WriteLine($"AMDFidelityFXAPI - returnCode: {returnCode}");
+            Console.WriteLine($"AMDFidelityFXAPI - returnCode: {returnCode}");
 
             if (returnCode != FfxApiReturnCodes.FFX_API_RETURN_OK)
             {
@@ -73,7 +73,7 @@ internal class AMDFidelityFXAPI
             }
 
             versionCount = (UInt64)Marshal.ReadInt64(versionQuery.outputCount);
-            Debug.WriteLine($"AMDFidelityFXAPI - versionCount: {versionCount}");
+            Console.WriteLine($"AMDFidelityFXAPI - versionCount: {versionCount}");
 
             if (versionCount > 0)
             {
@@ -117,7 +117,7 @@ internal class AMDFidelityFXAPI
                     // fill version ids and names arrays.
                     //ffxQuery(nullptr, &versionQuery.header);
                     returnCode = ffxQuery(IntPtr.Zero, ref versionQuery);
-                    Debug.WriteLine($"AMDFidelityFXAPI - returnCode: {returnCode}");
+                    Console.WriteLine($"AMDFidelityFXAPI - returnCode: {returnCode}");
                     
                     if (returnCode != FfxApiReturnCodes.FFX_API_RETURN_OK)
                     {
@@ -156,7 +156,7 @@ internal class AMDFidelityFXAPI
         }
         catch (Exception err)
         {
-            Debug.WriteLine($"AMDFidelityFXAPI - Error: {err.Message}");
+            Console.WriteLine($"AMDFidelityFXAPI - Error: {err.Message}");
         }
         finally
         {
