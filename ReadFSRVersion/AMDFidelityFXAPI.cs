@@ -102,13 +102,17 @@ internal class AMDFidelityFXAPI
                     //versionQuery.versionNames = versionNames.data();
 
                     versionQuery.versionIds = Marshal.AllocHGlobal(sizeof(UInt64) * versionCountInt);
+
+
                     versionQuery.versionNames = Marshal.AllocHGlobal(IntPtr.Size * versionCountInt);
 
                     for (var i = 0; i < versionCountInt; i++)
                     {
-                        versionIdsPtrs[i] = Marshal.AllocHGlobal(sizeof(UInt64));
-                        Marshal.WriteInt64(versionIdsPtrs[i], (long)versionIds[i]);
-                        Marshal.WriteIntPtr(versionQuery.versionIds, i * IntPtr.Size, versionIdsPtrs[i]);
+                        //versionIdsPtrs[i] = Marshal.AllocHGlobal(sizeof(UInt64));
+                        //Marshal.WriteInt64(versionIdsPtrs[i], (long)versionIds[i]);
+                        //Marshal.WriteIntPtr(versionQuery.versionIds, i * IntPtr.Size, versionIdsPtrs[i]);
+
+                        Marshal.WriteInt64(versionQuery.versionIds, i * sizeof(UInt64), 0l);
 
                         versionNamesPtrs[i] = Marshal.StringToHGlobalAnsi(versionNames[i]);
                         Marshal.WriteIntPtr(versionQuery.versionNames, i * IntPtr.Size, versionNamesPtrs[i]);
@@ -126,7 +130,8 @@ internal class AMDFidelityFXAPI
 
                     for (var i = 0; i < versionCountInt; i++)
                     {
-                        versionIds[i] = (UInt64)Marshal.ReadInt64(versionIdsPtrs[i]);
+                        //Marshal.ReadIntPtr(versionQuery.versionIds, i)
+                        versionIds[i] = (UInt64)Marshal.ReadInt64(versionQuery.versionIds, i * sizeof(UInt64));
                         versionNames[i] = Marshal.PtrToStringAnsi(Marshal.ReadIntPtr(versionQuery.versionNames, i * IntPtr.Size));
                     }
 
@@ -134,7 +139,12 @@ internal class AMDFidelityFXAPI
 
                     for (var i = 0; i < versionCountInt; i++)
                     {
-                        Console.WriteLine($"ID: {versionIds[i]}, Name: {versionNames[i]}");
+                        //FFX_SDK_MAKE_VERSION( major, minor, patch ) ( ( major << 22 ) | ( minor << 12 ) | patch )
+                        var major = (versionIds[i] >> 22) & 0x3FF;
+                        var minor = (versionIds[i] >> 12) & 0x3FF;
+                        var patch = versionIds[i] & 0xFFF;
+
+                        Console.WriteLine($"ID: {versionIds[i]}, {major}.{minor}.{patch}, Name: {versionNames[i]}");
                     }
 
                     return versionNames;
@@ -143,7 +153,7 @@ internal class AMDFidelityFXAPI
                 {
                     foreach (var ptr in versionIdsPtrs)
                     {
-                        Marshal.FreeHGlobal(ptr);
+                      //  Marshal.FreeHGlobal(ptr);
                     }
                     foreach (var ptr in versionNamesPtrs)
                     {

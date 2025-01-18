@@ -47,5 +47,8 @@ It will then use the ported code from [version selection](https://gpuopen.com/ma
 
 ~~I am unsure if I am passing structs to C++ dll incorrectly or if what I am attempting to do does not work like this. I don't know enough C++ to create a raw C++ minimal example, but if you can feel free to send a PR.~~
 
-After some changes this appears to be loading version strings. It is not loading version ids. The code was also generated with GitHub Copilot (GPT 4o) and should not be used in production. This is possibly why it is not loading version ids.
+
+~~After some changes this appears to be loading version strings. It is not loading version ids. The code was also generated with GitHub Copilot (GPT 4o) and should not be used in production. This is possibly why it is not loading version ids.~~
+
+This repo is now reading those numbers as actual numbers thanks to the answers in [this Stackoverflow post](https://stackoverflow.com/questions/79350829/calling-fsr-ffxquery-from-c-sharp-code-to-identify-dll-support).
 
