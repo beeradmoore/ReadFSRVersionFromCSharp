@@ -1,11 +1,11 @@
-﻿using SharpDX.Direct3D12;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using Vortice.Direct3D12;
 
 namespace ReadFSRVersion;
 
@@ -40,7 +40,7 @@ internal class AMDFidelityFXAPI
             throw new Exception("Failed to load DLL");
         }
 
-        Device? device = null;
+        ID3D12Device? device = null;
         try
         {
             var pAddressOfFunctionToCall = GetProcAddress(hModule, "ffxQuery");
@@ -62,7 +62,7 @@ internal class AMDFidelityFXAPI
 
             if (dllPath.EndsWith("_dx12.dll", StringComparison.OrdinalIgnoreCase))
             {
-                device = new Device(null, SharpDX.Direct3D.FeatureLevel.Level_11_0);
+                device = D3D12.D3D12CreateDevice<ID3D12Device>(null, Vortice.Direct3D.FeatureLevel.Level_11_0);
                 versionQuery.device = device.NativePointer;
             }
             else
@@ -70,6 +70,7 @@ internal class AMDFidelityFXAPI
                 versionQuery.device = IntPtr.Zero;
             }
 
+            versionQuery.device = IntPtr.Zero;
 
             // uint64_t versionCount = 0;
             UInt64 versionCount = 0;
