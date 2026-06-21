@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SharpDX.Direct3D12;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -25,8 +26,13 @@ internal class AMDFidelityFXAPI
     [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
     private delegate FfxApiReturnCodes ffxQueryDelegate(IntPtr context, ref QueryDescGetVersions header);
 
-    public List<string?> GetVersions(string dllPath)
+    public List<string?> GetVersions(string dllPath, ulong descType)
     {
+        if (File.Exists(dllPath) == false)
+        {
+            return [];
+        }
+
         Console.WriteLine($"AMDFidelityFXAPI - Loading {dllPath}");
         var hModule = LoadLibrary(dllPath);
         if (hModule == IntPtr.Zero)
@@ -34,6 +40,7 @@ internal class AMDFidelityFXAPI
             throw new Exception("Failed to load DLL");
         }
 
+        Device? device = null;
         try
         {
             var pAddressOfFunctionToCall = GetProcAddress(hModule, "ffxQuery");
@@ -51,10 +58,18 @@ internal class AMDFidelityFXAPI
             var versionQuery = new QueryDescGetVersions();
 
             //versionQuery.createDescType = FFX_API_CREATE_CONTEXT_DESC_TYPE_UPSCALE;
-            versionQuery.createDescType = FxxConsts.FFX_API_CREATE_CONTEXT_DESC_TYPE_UPSCALE;
+            versionQuery.createDescType = descType;
 
-            // versionQuery.device = GetDX12Device(); // only for DirectX 12 applications
-            versionQuery.device = IntPtr.Zero;
+            if (dllPath.EndsWith("_dx12.dll", StringComparison.OrdinalIgnoreCase))
+            {
+                device = new Device(null, SharpDX.Direct3D.FeatureLevel.Level_11_0);
+                versionQuery.device = device.NativePointer;
+            }
+            else
+            {
+                versionQuery.device = IntPtr.Zero;
+            }
+
 
             // uint64_t versionCount = 0;
             UInt64 versionCount = 0;
@@ -112,7 +127,7 @@ internal class AMDFidelityFXAPI
                         //Marshal.WriteInt64(versionIdsPtrs[i], (long)versionIds[i]);
                         //Marshal.WriteIntPtr(versionQuery.versionIds, i * IntPtr.Size, versionIdsPtrs[i]);
 
-                        Marshal.WriteInt64(versionQuery.versionIds, i * sizeof(UInt64), 0l);
+                        Marshal.WriteInt64(versionQuery.versionIds, i * sizeof(UInt64), 0L);
 
                         versionNamesPtrs[i] = Marshal.StringToHGlobalAnsi(versionNames[i]);
                         Marshal.WriteIntPtr(versionQuery.versionNames, i * IntPtr.Size, versionNamesPtrs[i]);
@@ -122,7 +137,7 @@ internal class AMDFidelityFXAPI
                     //ffxQuery(nullptr, &versionQuery.header);
                     returnCode = ffxQuery(IntPtr.Zero, ref versionQuery);
                     Console.WriteLine($"AMDFidelityFXAPI - returnCode: {returnCode}");
-                    
+
                     if (returnCode != FfxApiReturnCodes.FFX_API_RETURN_OK)
                     {
                         throw new Exception($"Failed to get version count. Return code: {returnCode}");
@@ -153,7 +168,7 @@ internal class AMDFidelityFXAPI
                 {
                     foreach (var ptr in versionIdsPtrs)
                     {
-                      //  Marshal.FreeHGlobal(ptr);
+                        //  Marshal.FreeHGlobal(ptr);
                     }
                     foreach (var ptr in versionNamesPtrs)
                     {
@@ -170,9 +185,19 @@ internal class AMDFidelityFXAPI
         }
         finally
         {
+            if (device is not null)
+            {
+                device.Dispose();
+                device = null;
+            }
             FreeLibrary(hModule);
         }
 
         return new List<string?>();
+    }
+
+    public static UInt64 FxxApiMakeEffectSubId(UInt64 effectId, UInt64 subversion)
+    {
+        return ((effectId & FxxConsts.FFX_API_EFFECT_MASK) | (subversion & ~FxxConsts.FFX_API_EFFECT_MASK));
     }
 }

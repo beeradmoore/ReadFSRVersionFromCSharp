@@ -28,29 +28,41 @@ public struct QueryDescGetVersions
     //public byte[]? versionNames;  ///< Output array of version names for display. If null, only ids and count are returned. If both this and versionIds are null, only count is returned.
 
     public QueryDescGetVersions()
+{
+    header = new ffxApiHeader()
     {
-        header = new ffxApiHeader()
-        {
-            type = FxxConsts.FFX_API_QUERY_DESC_TYPE_GET_VERSIONS,
-        };
-    }
+        type = FxxConsts.FFX_API_QUERY_DESC_TYPE_GET_VERSIONS,
+    };
+}
 };
 
 
 public enum FfxApiReturnCodes
 {
-    FFX_API_RETURN_OK = 0, ///< The oparation was successful.
-    FFX_API_RETURN_ERROR = 1, ///< An error occurred that is not further specified.
-    FFX_API_RETURN_ERROR_UNKNOWN_DESCTYPE = 2, ///< The structure type given was not recognized for the function or context with which it was used. This is likely a programming error.
-    FFX_API_RETURN_ERROR_RUNTIME_ERROR = 3, ///< The underlying runtime (e.g. D3D12, Vulkan) or effect returned an error code.
-    FFX_API_RETURN_NO_PROVIDER = 4, ///< No provider was found for the given structure type. This is likely a programming error.
-    FFX_API_RETURN_ERROR_MEMORY = 5, ///< A memory allocation failed.
-    FFX_API_RETURN_ERROR_PARAMETER = 6, ///< A parameter was invalid, e.g. a null pointer, empty resource or out-of-bounds enum value.
+FFX_API_RETURN_OK = 0, ///< The oparation was successful.
+FFX_API_RETURN_ERROR = 1, ///< An error occurred that is not further specified.
+FFX_API_RETURN_ERROR_UNKNOWN_DESCTYPE = 2, ///< The structure type given was not recognized for the function or context with which it was used. This is likely a programming error.
+FFX_API_RETURN_ERROR_RUNTIME_ERROR = 3, ///< The underlying runtime (e.g. D3D12, Vulkan) or effect returned an error code.
+FFX_API_RETURN_NO_PROVIDER = 4, ///< No provider was found for the given structure type. This is likely a programming error.
+FFX_API_RETURN_ERROR_MEMORY = 5, ///< A memory allocation failed.
+FFX_API_RETURN_ERROR_PARAMETER = 6, ///< A parameter was invalid, e.g. a null pointer, empty resource or out-of-bounds enum value.
 };
 
 
 public class FxxConsts
 {
-    public const UInt64 FFX_API_CREATE_CONTEXT_DESC_TYPE_UPSCALE = 0x00010000u;
-    public const UInt64 FFX_API_QUERY_DESC_TYPE_GET_VERSIONS = 4u;
+public const UInt64 FFX_API_CREATE_CONTEXT_DESC_TYPE_UPSCALE = 0x00010000u;
+public const UInt64 FFX_API_QUERY_DESC_TYPE_GET_VERSIONS = 4u;
+public const UInt64 FFX_API_EFFECT_MASK = 0x00ff0000u;
+
+
+// FFX_API_EFFECT_IDs
+public const UInt64 FFX_API_EFFECT_ID_UPSCALE = 0x00010000u;
+public const UInt64 FFX_API_EFFECT_ID_FRAMEGENERATION = 0x00020000u;
+public const UInt64 FFX_API_EFFECT_ID_FRAMEGENERATIONSWAPCHAIN = 0x00030000u;
+// Need to keep this ID around for the deprecated VK frame gen swapchain
+public const UInt64 FFX_API_EFFECT_ID_FRAMEGENERATIONSWAPCHAIN_VK = 0x00040000u;
+// Need to keep this ID around for the deprecated VK frame gen swapchain
+public const UInt64 FFX_API_EFFECT_ID_DENOISER = 0x00050000u;
+public const UInt64 FFX_API_EFFECT_ID_RADIANCECACHE = 0x00060000u;
 }

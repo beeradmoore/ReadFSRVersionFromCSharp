@@ -1,0 +1,233 @@
+
+AMDFidelityFXAPI - Loading v2.2.0\Kits\FidelityFX\signedbin\amd_fidelityfx_denoiser_dx12.dll
+AMDFidelityFXAPI - Reading version count
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - versionCount: 0
+
+AMDFidelityFXAPI - Loading v2.2.0\Kits\FidelityFX\signedbin\amd_fidelityfx_framegeneration_dx12.dll
+AMDFidelityFXAPI - Reading version count
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - versionCount: 1
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - Version Names and IDs:
+ID: 17726168133342859270, 3.1.6, Name: 3.1.6
+
+AMDFidelityFXAPI - Loading v2.2.0\Kits\FidelityFX\signedbin\amd_fidelityfx_loader_dx12.dll
+AMDFidelityFXAPI - Reading version count
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - versionCount: 2
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - Version Names and IDs:
+ID: 17700776140660019205, 3.1.5, Name: 3.1.5
+ID: 17700776140655833092, 2.3.4, Name: 2.3.4
+
+AMDFidelityFXAPI - Loading v2.2.0\Kits\FidelityFX\signedbin\amd_fidelityfx_radiancecache_dx12.dll
+AMDFidelityFXAPI - Reading version count
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - versionCount: 1
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - Version Names and IDs:
+ID: 12308798262227275776, 0.9.0, Name: 0.9.0
+
+AMDFidelityFXAPI - Loading v2.2.0\Kits\FidelityFX\signedbin\amd_fidelityfx_upscaler_dx12.dll
+AMDFidelityFXAPI - Reading version count
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - versionCount: 2
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - Version Names and IDs:
+ID: 17700776140660019205, 3.1.5, Name: 3.1.5
+ID: 17700776140655833092, 2.3.4, Name: 2.3.4
+
+AMDFidelityFXAPI - Loading v2.1.1\Kits\FidelityFX\signedbin\amd_fidelityfx_denoiser_dx12.dll
+AMDFidelityFXAPI - Reading version count
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - versionCount: 0
+
+AMDFidelityFXAPI - Loading v2.1.1\Kits\FidelityFX\signedbin\amd_fidelityfx_framegeneration_dx12.dll
+AMDFidelityFXAPI - Reading version count
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - versionCount: 1
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - Version Names and IDs:
+ID: 17726168133342859270, 3.1.6, Name: 3.1.6
+
+AMDFidelityFXAPI - Loading v2.1.1\Kits\FidelityFX\signedbin\amd_fidelityfx_loader_dx12.dll
+AMDFidelityFXAPI - Reading version count
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - versionCount: 2
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - Version Names and IDs:
+ID: 17700776140660019205, 3.1.5, Name: 3.1.5
+ID: 17700776140655833092, 2.3.4, Name: 2.3.4
+
+AMDFidelityFXAPI - Loading v2.1.1\Kits\FidelityFX\signedbin\amd_fidelityfx_radiancecache_dx12.dll
+AMDFidelityFXAPI - Reading version count
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - versionCount: 1
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - Version Names and IDs:
+ID: 12308798262227275776, 0.9.0, Name: 0.9.0
+
+AMDFidelityFXAPI - Loading v2.1.1\Kits\FidelityFX\signedbin\amd_fidelityfx_upscaler_dx12.dll
+AMDFidelityFXAPI - Reading version count
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - versionCount: 2
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - Version Names and IDs:
+ID: 17700776140660019205, 3.1.5, Name: 3.1.5
+ID: 17700776140655833092, 2.3.4, Name: 2.3.4
+
+AMDFidelityFXAPI - Loading v2.1.0\Kits\FidelityFX\signedbin\amd_fidelityfx_denoiser_dx12.dll
+AMDFidelityFXAPI - Reading version count
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - versionCount: 0
+
+AMDFidelityFXAPI - Loading v2.1.0\Kits\FidelityFX\signedbin\amd_fidelityfx_framegeneration_dx12.dll
+AMDFidelityFXAPI - Reading version count
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - versionCount: 1
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - Version Names and IDs:
+ID: 17726168133342859270, 3.1.6, Name: 3.1.6
+
+AMDFidelityFXAPI - Loading v2.1.0\Kits\FidelityFX\signedbin\amd_fidelityfx_loader_dx12.dll
+AMDFidelityFXAPI - Reading version count
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - versionCount: 2
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - Version Names and IDs:
+ID: 17700776140660019205, 3.1.5, Name: 3.1.5
+ID: 17700776140655833092, 2.3.4, Name: 2.3.4
+
+AMDFidelityFXAPI - Loading v2.1.0\Kits\FidelityFX\signedbin\amd_fidelityfx_radiancecache_dx12.dll
+AMDFidelityFXAPI - Reading version count
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - versionCount: 1
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - Version Names and IDs:
+ID: 12308798262227275776, 0.9.0, Name: 0.9.0
+
+AMDFidelityFXAPI - Loading v2.1.0\Kits\FidelityFX\signedbin\amd_fidelityfx_upscaler_dx12.dll
+AMDFidelityFXAPI - Reading version count
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - versionCount: 2
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - Version Names and IDs:
+ID: 17700776140660019205, 3.1.5, Name: 3.1.5
+ID: 17700776140655833092, 2.3.4, Name: 2.3.4
+
+AMDFidelityFXAPI - Loading v2.0.0\Kits\FidelityFX\signedbin\amd_fidelityfx_framegeneration_dx12.dll
+AMDFidelityFXAPI - Reading version count
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - versionCount: 1
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - Version Names and IDs:
+ID: 17726168133342859269, 3.1.5, Name: 3.1.5
+
+AMDFidelityFXAPI - Loading v2.0.0\Kits\FidelityFX\signedbin\amd_fidelityfx_loader_dx12.dll
+AMDFidelityFXAPI - Reading version count
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - versionCount: 2
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - Version Names and IDs:
+ID: 17700776140660019205, 3.1.5, Name: 3.1.5
+ID: 17700776140655833092, 2.3.4, Name: 2.3.4
+
+AMDFidelityFXAPI - Loading v2.0.0\Kits\FidelityFX\signedbin\amd_fidelityfx_upscaler_dx12.dll
+AMDFidelityFXAPI - Reading version count
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - versionCount: 2
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - Version Names and IDs:
+ID: 17700776140660019205, 3.1.5, Name: 3.1.5
+ID: 17700776140655833092, 2.3.4, Name: 2.3.4
+
+AMDFidelityFXAPI - Loading v1.1.4\PrebuiltSignedDLL\amd_fidelityfx_dx12.dll
+AMDFidelityFXAPI - Reading version count
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - versionCount: 2
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - Version Names and IDs:
+ID: 17700776140660019204, 3.1.4, Name: 3.1.4
+ID: 17700776140655833091, 2.3.3, Name: 2.3.3
+
+AMDFidelityFXAPI - Loading v1.1.4\PrebuiltSignedDLL\amd_fidelityfx_vk.dll
+AMDFidelityFXAPI - Reading version count
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - versionCount: 2
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - Version Names and IDs:
+ID: 17700776140660019204, 3.1.4, Name: 3.1.4
+ID: 17700776140655833091, 2.3.3, Name: 2.3.3
+
+AMDFidelityFXAPI - Loading v1.1.3\PrebuiltSignedDLL\amd_fidelityfx_dx12.dll
+AMDFidelityFXAPI - Reading version count
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - versionCount: 2
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - Version Names and IDs:
+ID: 17700776140660019203, 3.1.3, Name: 3.1.3
+ID: 17700776140655833090, 2.3.2, Name: 2.3.2
+
+AMDFidelityFXAPI - Loading v1.1.3\PrebuiltSignedDLL\amd_fidelityfx_vk.dll
+AMDFidelityFXAPI - Reading version count
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - versionCount: 2
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - Version Names and IDs:
+ID: 17700776140660019203, 3.1.3, Name: 3.1.3
+ID: 17700776140655833090, 2.3.2, Name: 2.3.2
+
+AMDFidelityFXAPI - Loading v1.1.2\PrebuiltSignedDLL\amd_fidelityfx_dx12.dll
+AMDFidelityFXAPI - Reading version count
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - versionCount: 2
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - Version Names and IDs:
+ID: 17700776140660019202, 3.1.2, Name: 3.1.2
+ID: 17700776140655833090, 2.3.2, Name: 2.3.2
+
+AMDFidelityFXAPI - Loading v1.1.2\PrebuiltSignedDLL\amd_fidelityfx_vk.dll
+AMDFidelityFXAPI - Reading version count
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - versionCount: 2
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - Version Names and IDs:
+ID: 17700776140660019202, 3.1.2, Name: 3.1.2
+ID: 17700776140655833090, 2.3.2, Name: 2.3.2
+
+AMDFidelityFXAPI - Loading v1.1.1\PrebuiltSignedDLL\amd_fidelityfx_dx12.dll
+AMDFidelityFXAPI - Reading version count
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - versionCount: 2
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - Version Names and IDs:
+ID: 17700776140660019201, 3.1.1, Name: 3.1.1
+ID: 17700776140655833090, 2.3.2, Name: 2.3.2
+
+AMDFidelityFXAPI - Loading v1.1.1\PrebuiltSignedDLL\amd_fidelityfx_vk.dll
+AMDFidelityFXAPI - Reading version count
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - versionCount: 2
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - Version Names and IDs:
+ID: 17700776140660019201, 3.1.1, Name: 3.1.1
+ID: 17700776140655833090, 2.3.2, Name: 2.3.2
+
+AMDFidelityFXAPI - Loading v1.1.0\PrebuiltSignedDLL\amd_fidelityfx_dx12.dll
+AMDFidelityFXAPI - Reading version count
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - versionCount: 2
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - Version Names and IDs:
+ID: 17700776140660019200, 3.1.0, Name: 3.1.0
+ID: 17700776140655833090, 2.3.2, Name: 2.3.2
+
+AMDFidelityFXAPI - Loading v1.1.0\PrebuiltSignedDLL\amd_fidelityfx_vk.dll
+AMDFidelityFXAPI - Reading version count
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - versionCount: 2
+AMDFidelityFXAPI - returnCode: FFX_API_RETURN_OK
+AMDFidelityFXAPI - Version Names and IDs:
+ID: 17700776140660019200, 3.1.0, Name: 3.1.0
+ID: 17700776140655833090, 2.3.2, Name: 2.3.2
